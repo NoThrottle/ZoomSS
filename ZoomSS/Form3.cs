@@ -13,6 +13,8 @@ namespace ZoomSS
 {
     public partial class Form3 : Form
     {
+        //This Partial Class controls where the settings are saved and controls the settings form.
+
         static string defaultpath = Path.Combine((Environment.GetFolderPath(Environment.SpecialFolder.MyPictures)), "ZoomSS");
         static string path = defaultpath;
         public override string Text { get; set; }
@@ -121,6 +123,11 @@ namespace ZoomSS
         }
 
         private void checkBox2_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tabPage1_Click(object sender, EventArgs e)
         {
 
         }

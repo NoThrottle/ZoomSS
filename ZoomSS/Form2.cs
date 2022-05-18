@@ -1,5 +1,4 @@
-﻿// Not original code thanks to the dude who made this \/
-// Original from: http://stackoverflow.com/a/3124252/122195
+﻿// Some code from http://stackoverflow.com/a/3124252/122195. Thanks to the dude who made this
 // Modified version multiple monitors aware and text scaling aware
 using System;
 using System.Drawing;
@@ -94,7 +93,7 @@ namespace ZoomSS
 
                 Image.Save(SaveManager.GetPath(), ImageFormat.Png);
                 return "done";
-                //return SaveManager.ProcessPath("count");
+
             }
             else
             {
@@ -126,14 +125,22 @@ namespace ZoomSS
         #endregion
 
         #region Overrides
-        protected override void OnMouseDown(MouseEventArgs e)
+        private void OnMouseDown(object sender, MouseEventArgs e)
         {
             // Start the snip on mouse down
             if (e.Button != MouseButtons.Left)
             {
                 return;
             }
-            _pointStart = e.Location;
+
+            Control control = this;
+
+            // Calculate the startPoint by using the PointToScreen 
+            // method.
+            _pointStart = control.PointToScreen(new Point(e.X, e.Y));
+            Console.WriteLine(_pointStart);
+
+            //_pointStart = e.Location;
             _rectSelection = new Rectangle(e.Location, new Size(0, 0));
             Invalidate();
         }
@@ -146,6 +153,7 @@ namespace ZoomSS
                 return;
             }
             int x1 = Math.Min(e.X, _pointStart.X);
+
             int y1 = Math.Min(e.Y, _pointStart.Y);
             int x2 = Math.Max(e.X, _pointStart.X);
             int y2 = Math.Max(e.Y, _pointStart.Y);
@@ -228,7 +236,7 @@ namespace ZoomSS
 
         protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
         {
-            // Allow canceling the snip with the Escape key
+            // Allows canceling the snip with the Escape key
             if (keyData == Keys.Escape)
             {
                 Image = null;

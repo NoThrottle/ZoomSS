@@ -12,6 +12,7 @@ namespace ZoomSS
 {
     public partial class Form4 : Form
     {
+        //This Partial Class controls the Information Form.
         public Form4()
         {
             InitializeComponent();

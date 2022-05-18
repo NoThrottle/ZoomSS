@@ -40,6 +40,7 @@
             this.Name = "SnippingTool";
             this.Text = "ZoomSS";
             this.Load += new System.EventHandler(this.SnippingTool_Load);
+            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.OnMouseDown);
             this.ResumeLayout(false);
 
         }

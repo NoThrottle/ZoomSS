@@ -38,11 +38,11 @@
             this.checkBox2 = new System.Windows.Forms.CheckBox();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.label4 = new System.Windows.Forms.Label();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
             this.label6 = new System.Windows.Forms.Label();
+            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -144,6 +144,27 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Function";
             this.tabPage1.UseVisualStyleBackColor = true;
+            this.tabPage1.Click += new System.EventHandler(this.tabPage1_Click);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(12, 107);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(250, 13);
+            this.label5.TabIndex = 9;
+            this.label5.Text = "Tips will show when hovering over a menu element.";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(12, 37);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(241, 26);
+            this.label4.TabIndex = 8;
+            this.label4.Text = "By default when disabled, pressing X will hide the \r\napplication to the System tr" +
+    "ay.";
+            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // tabPage2
             // 
@@ -157,33 +178,6 @@
             this.tabPage2.Text = "Appearance";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(12, 37);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(241, 26);
-            this.label4.TabIndex = 8;
-            this.label4.Text = "By default when disabled, pressing X will hide the \r\napplication to the System tr" +
-    "ay.";
-            this.label4.Click += new System.EventHandler(this.label4_Click);
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(12, 107);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(250, 13);
-            this.label5.TabIndex = 9;
-            this.label5.Text = "Tips will show when hovering over a menu element.";
-            // 
-            // numericUpDown1
-            // 
-            this.numericUpDown1.Location = new System.Drawing.Point(62, 24);
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(120, 20);
-            this.numericUpDown1.TabIndex = 0;
-            // 
             // label6
             // 
             this.label6.AutoSize = true;
@@ -192,6 +186,13 @@
             this.label6.Size = new System.Drawing.Size(43, 13);
             this.label6.TabIndex = 1;
             this.label6.Text = "Opacity";
+            // 
+            // numericUpDown1
+            // 
+            this.numericUpDown1.Location = new System.Drawing.Point(62, 24);
+            this.numericUpDown1.Name = "numericUpDown1";
+            this.numericUpDown1.Size = new System.Drawing.Size(120, 20);
+            this.numericUpDown1.TabIndex = 0;
             // 
             // Form3
             // 
